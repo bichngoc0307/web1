@@ -1,0 +1,268 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    height: 80px;
+}
+header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #f5f5f5;
+    transition: all 0.5s ease-in-out;
+    z-index: 10;
+    background-color: white;
+    display: flex;
+}
+.head-logo {
+    width: 20%;
+    display: block;
+    float:left;
+    align-items: center;
+    justify-content: center;
+}
+.head-logo img {
+    height: 80px;
+}
+#btnlg{
+	list-style-type: none;
+	text-align: center;
+	width: 100px;
+	font-weight: bold;
+	cursor: pointer;
+	margin: 0 auto;
+	animation: bottomup 0.5s;
+	z-index: 100;
+    padding: 7.5px 15px;
+    border-radius: 2px;
+    /* background-color: #4FC3A1; */
+    background-color: #fab1a0;
+    color: #ffffff;
+    border: none;
+    outline: none;
+}
+#btnlogout{
+    background-color: #fff;
+	color: #000;
+	list-style-type: none;
+	text-align: center;
+	height: 25px;
+	width: 100px;
+	line-height: 25px;
+	font-weight: bold;
+	border-radius: 2px;
+	display: none;
+	cursor: pointer;
+	margin: 0 auto;
+	animation: bottomup 0.5s;
+	z-index: 100;
+}
+
+header li{
+    position: absolute;
+    right: 10px;
+    top:10px;
+    list-style: none; 
+}
+header li:hover > #btnlogout{
+	display: block;
+}
+header ul li a
+{
+    color: black;
+}
+#btnlogout:hover{
+	background-color: black;
+	color: #fff;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    text-align: center;
+    padding: 15px;
+}
+.menu{
+    margin-top: 80px;
+}
+.menu-left{
+    float: left;
+    width: 150px;
+    margin-top: 60px;
+}
+.menu-left li {
+    padding: 15px 0px 15px 20px;
+    display: flex; 
+}
+.menu-left li .icon p{
+    float: right;
+    text-decoration: none;
+    color: black;
+    padding: 0px 10px 5px 10px;
+    font-size: 18px;
+    transition: 0.25s ease-in-out;
+    cursor: pointer;
+    display: block;
+}
+.menu-left li .icon{
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    display: block;
+}
+.menu-left li:hover {
+    opacity: 80%;
+}
+.click {
+    background-color: #fab1a0;
+    color: white;
+}
+li.click .icon p{
+    color: white;
+}
+
+/* Table Styles */
+.table-1 {
+    margin-top: 60px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    white-space: nowrap;
+    background-color: white;
+    width: calc(100% - 150px);
+}
+
+.table-1 td, .table-1 th {
+    text-align: center;
+    padding: 10px;
+}
+
+.table-1 td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 15px;
+}
+
+.table-1 thead th {
+    font-size: 17px;
+    color: #ffffff;
+    background: #fab1a0;
+}
+
+
+.table-1 thead th:nth-child(odd) {
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.87);
+}
+
+.table-1 tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+.table-footer {
+    width: 100%;
+    float: right;
+    background-color: #2c3136;
+    padding: 13px;
+    vertical-align: top;
+    position: fixed;
+}
+.table-footer input, .table-footer button, .table-footer select {
+    padding: 5px 10px;
+    border: 3px solid transparent;
+    background-color: #F8F8F8;
+}
+
+/*form add product */
+.box{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.box-content {
+    margin: 0 auto;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+
+.box-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fab1a0;
+    padding: 10px 20px
+}
+
+.close {
+    color: #fab1a0;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+}
+
+#container-form{
+    display: flex;
+    justify-content: center;
+}
+#box-form{
+    width: 60%;
+    background-color: #ffffff;
+    padding: 20px 50px;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box{
+    margin-bottom: 10px;
+    padding: 7.5px 15px;
+    width: 100%;
+    border: 1px solid #cccccc;
+    outline: none;
+}
+.input-box input{
+    padding: 7.5px 15px;
+    width: 100%;
+    border: 1px solid #cccccc;
+    outline: none;
+}
+
+.btn{
+	list-style-type: none;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: auto;
+    padding: 7.5px 15px;
+    border-radius: 2px;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+}
+.btn:hover {
+    background-color: #fab1a0;
+    transition: 0.25s ease-in-out;
+}

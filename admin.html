@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+</head>
+
+<body onload="hello();createProduct();showProductList(0);showUserList(0);">
+    <header id="hello">
+    </header>
+    
+    <div class="menu">
+        <div id="footer">
+            <div class="table-footer">
+                <select name="kieuTimKhachHang">
+                    <option value="ID">Search by code</option>
+                    <option value="Ten">Search by name</option>
+                    <option value="Loai">Search by category</option>
+                </select>
+                <input type="text" placeholder="Enter...">
+                <button>Search</button>
+                <button id="add">Add Product</button>
+            </div>
+        </div>
+        <div class="menu-left">
+            <h2>MENU</h2>
+            <ul>
+                <li id="product" class="click">
+                    <div class="icon"><span class="material-symbols-outlined">widgets</span>
+                        <p>Product</p>
+                    </div>
+
+                <li id="order">
+                    <div class="icon"><span class="material-symbols-outlined">receipt_long</span>
+                        <p>Order</p>
+                    </div>
+
+                </li>
+                <li id="customer">
+                    <div class="icon"><span class="material-symbols-outlined">group</span>
+                        <p>Customer</p>
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+        
+        <div class="table-wrapper" id="content">
+            <table class="table-1" id="productlist">
+                <thead>
+                    <tr>
+                        <th style="width: 5%;">ID</th>
+                        <th style="width: 10%;">Loại</th>
+                        <th style="width: 15%;">Hình ảnh</th>
+                        <th style="width: 40%;">Tên</th>
+                        <th style="width: 15%;">Giá</th>
+                        <th style="width: 15%;">Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                <tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <!-- Add product -->
+    <div id="box" class="box">
+
+    </div>
+    <!-- Edit product -->
+    <div id="modal1" class="box">
+        <div class="box-content">
+            <div class="box-header">
+                <h2>Edit Product</h2>
+                <button class="close" onclick="closechangebx()">&times;</button>
+            </div>
+            <div id="container-form">
+                <div class="info" id="box-form">
+                    <form id="form">
+                        <div class="image">
+                            <img id="imgafter" src="">
+                        </div>
+                        <label for="name">Product name:</label>
+                        <input type="text" id="name" class="input-box">
+                        <label for="name">Price:</label>
+                        <input type="text" id="price" class="input-box">
+                        <input type="file" id="fileimg" style="margin-bottom: 10px;">
+                        <button id="save" class="btn">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit user -->
+    <div id="modal2" class="box">
+        <div class="box-content">
+            <div class="box-header">
+                <h2>Edit User</h2>
+                <button class="close" onclick="closechangebx()">&times;</button>
+            </div>
+            <div id="container-form">
+                <div class="info" id="box-form">
+                    <form id="form">
+                        <label for="name">Username:</label>
+                        <input type="text" id="username" placeholder="Enter username" class="input-box">
+                        <label for="name">Type:</label>
+                        <!-- <input type="text" id="usertype" value=""><br> -->
+                        <select name="" id="" style="margin-bottom: 10px;">
+                            <option value="1">Admin</option>
+                            <option value="0">User</option>
+                        </select>
+                        <button id="save2" class="btn">Lưu chỉnh sửa</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+
+</script>
+<script src='admin.js'></script>
+
+</html>

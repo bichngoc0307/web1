@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Team 20</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="product-detail.css">
+    <link rel="stylesheet" href="login-signup.css">
+    <link rel="stylesheet" href="menu-bar.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body onload="checklogin(); createAdmin();">
+    <div class="wrapper">
+        <!-- HEADER -->
+        <header>
+            <div class="inner-header">
+                <div class="head-menu-bar" id="head-menu-bar"></div>
+                <div class="head-bar" id="head-bar"><i class="fa-solid fa-bars"></i></div>
+                <div class="head-logo"><img src="image/logo.png" alt=""></div>
+                <div class="head-menu" id="head-menu">
+                    <div>
+                        <ul class="menu">
+                            <li id="home">
+                                <!-- <div>Home</div> -->
+                                <a href="#home" class="a">Home</a>
+                            </li>
+                            <li class="dropdown" id="shop">
+                                <!-- <div>Shop</div> -->
+                                <a href="#shop" class="a">shop</a>
+                                <ul class="dropdown-content">
+                                    <li>crop top</li>
+                                    <li>dress</li>
+                                    <li>jeans</li>
+                                    <li>set</li>
+                                    <li>skirt</li>
+                                    <li>sweater</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#shop" class="a">contact</a>
+                            </li>
+                            <li>
+                                <a href="#shop" class="a">about</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="head-icon">
+                    <ul class="icon">
+                        <li id="user">
+                            <i class="fa-solid fa-user"></i>
+                        </li>
+                        <li id="bag">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </li>
+                        <li>
+                            <div action="" id="search-box">
+                                <input type="text" id="search-text" placeholder="Type to search" required>
+                                <button id="search-btn">
+                                    <i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Div render giỏ hàng và login-signup -->
+                <div id="Modal" class="modal">
+
+                </div>
+
+            </div>
+        </header>
+        <!-- BANNER -->
+        <div id="banner">
+            <img src="image/welcome.png" alt="">
+        </div>
+        <!-- CONTENT -->
+
+        <div id="content">
+            <div class="headline" id="headline">
+            </div>
+            <div id="content-main">
+                <ul class="categories" id="categories">
+                </ul>
+                <ul class="products" id="products">
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- Nút phân trang -->
+        <div class="page">
+            <div>
+                <ul id="nut">
+
+                </ul>
+
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="container">
+                <div class="content about">
+                    <h2>About</h2>
+                    <p>TEAM20 is a global fashion and lifestyle e-retailer committed to making the beauty of fashion
+                        accessible to
+                        all. We use on-demand manufacturing technology to connect suppliers to our agile supply chain,
+                        reducing
+                        inventory waste and enabling us to deliver a variety of affordable products to customers around
+                        the world.
+                        From our global offices, we reach customers in more than 150 countries. To learn more about
+                        TEAM20, visit
+                        us.TEAM20.com.</p>
+                    <ul class="social-icon">
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="content links">
+                    <h2>Links</h2>
+                    <ul class="link-content">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Service</a></li>
+                    </ul>
+                </div>
+                <div class="content contact">
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <span>Address</span>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-phone"></i></span>
+                            <span>Phone Number</span>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-envelope"></i></span>
+                            <span>Mail</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src='main.js'></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop()) {
+                    $('header').addClass('sticky')
+                } else {
+                    $('header').removeClass('sticky')
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
